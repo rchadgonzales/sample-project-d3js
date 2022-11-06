@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D3 JS</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+      .big {
+        font-size: 1.7rem;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="items">
+      <li>This is an item</li>
+      <li>This is an item</li>
+      <li>This is an item</li>
+      <li>This is an item</li>
+      <li>This is an item</li>
+    </ul>
+
+    <script>
+      // d3.selectAll("li").style("color", "green");
+      // d3.select("li").style("color", "red");
+      // d3.select("li:nth-child(3n)").style("color", "red");
+      // d3.selectAll("li:nth-child(odd)").style("color", "red");
+      d3.selectAll("li:nth-child(even)")
+        .style("color", "green")
+        .html("This is an even item")
+        .classed("big", true);
+    </script>
+  </body>
+</html>
