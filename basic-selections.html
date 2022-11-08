@@ -13,7 +13,6 @@
     </style>
   </head>
   <body>
-    <p>My name is <span class="name"></span>.</p>
     <ul class="items">
       <li>This is an item</li>
       <li>This is an item</li>
@@ -28,48 +27,11 @@
       // d3.select("li").style("color", "red");
       // d3.select("li:nth-child(3n)").style("color", "red");
       // d3.selectAll("li:nth-child(odd)").style("color", "red");
-      /*
+
       d3.selectAll("li:nth-child(even)")
         .style("color", "green")
         .html("This is an even item")
         .classed("big", true);
-        */
-
-      // BIND DATA
-      /*
-      var numArray = [12, 20, 33, 40, 55];
-      d3.selectAll(".items li")
-        .data(numArray)
-        .text(function (d) {
-          return "This is item number " + d;
-        });
-      */
-      /*
-      var numArray = [12, 20, 33, 40, 55];
-      d3.selectAll(".items li")
-        .data(numArray)
-        .style("font-size", function (d) {
-          return d + "px";
-        });
-        */
-      var numArray = [12, 20, 33, 40, 55, 60, 75, 80, 90, 101, 122, 130];
-      var name = "Richard";
-
-      var li = d3
-        .select("body")
-        .selectAll(".items li")
-        .data(numArray)
-        .text(function (d) {
-          return "This is item number " + d;
-        });
-      li.enter()
-        .append("li")
-        .text(function (d) {
-          return "This is item number " + d;
-        });
-      li.exit().remove();
-
-      d3.select(".name").text(name);
     </script>
   </body>
 </html>
